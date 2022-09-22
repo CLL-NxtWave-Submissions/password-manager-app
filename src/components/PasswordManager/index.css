@@ -1,0 +1,17 @@
+.password-manager-bg-container {
+  background-image: linear-gradient(to bottom, #9ba9eb, #c3caea);
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-image {
+  height: 5rem;
+  width: 5rem;
+  align-self: flex-start;
+}
