@@ -83,3 +83,20 @@
   color: #ffffff;
   align-self: flex-end;
 }
+
+@media (min-width: 768px) {
+  .add-new-password-bg-container {
+    flex-direction: row;
+  }
+
+  .add-new-password-img {
+    order: 1;
+    height: 100%;
+    width: 500%;
+  }
+
+  .add-new-password-form-input-container {
+    height: 100%;
+    width: 50%;
+  }
+}
