@@ -1,6 +1,8 @@
 import {Component} from 'react'
 import 'index.css'
 
+import AddNewPassword from '../AddNewPassword'
+
 export default class PasswordManager extends Component {
   state = {
     listOfPasswords: [],
@@ -44,6 +46,7 @@ export default class PasswordManager extends Component {
           src="https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png"
           alt="app logo"
         />
+        <AddNewPassword addNewPasswordHandler={this.onAddNewPassword} />
       </div>
     )
   }
