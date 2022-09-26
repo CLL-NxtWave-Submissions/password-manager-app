@@ -117,7 +117,7 @@ export default class AddNewPassword extends Component {
             </div>
             <input
               className="form-input"
-              type="text"
+              type="password"
               placeholder="Enter Password"
               onChange={this.onPasswordChange}
               value={password}
