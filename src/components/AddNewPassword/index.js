@@ -38,7 +38,7 @@ export default class AddNewPassword extends Component {
     addNewPasswordEvent.preventDefault()
 
     const uniqueIdForNewPasswordEntry = uuidv4()
-    const newPasswordData = {uniqueIdForNewPasswordEntry, ...this.state}
+    const newPasswordData = {id: uniqueIdForNewPasswordEntry, ...this.state}
 
     const {addNewPasswordHandler} = this.props
 
