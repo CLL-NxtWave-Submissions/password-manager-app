@@ -3,6 +3,27 @@ import './index.css'
 
 import {v4 as uuidv4} from 'uuid'
 
+const domainInitialBackgroundColorClassList = [
+  'domain-initial-background-violet',
+  'domain-initial-background-gold',
+  'domain-initial-background-green',
+  'domain-initial-background-orange',
+  'domain-initial-background-jade',
+  'domain-initial-background-red',
+  'domain-initial-background-blue',
+]
+
+const RANDOM_MAX_NUM = 1000
+const getRandomDomainInitialBackgroundColorClass = () => {
+  const randomBackgroundColorClassListIndex =
+    Math.floor(Math.random() * RANDOM_MAX_NUM) %
+    domainInitialBackgroundColorClassList.length
+
+  return domainInitialBackgroundColorClassList[
+    randomBackgroundColorClassListIndex
+  ]
+}
+
 export default class AddNewPassword extends Component {
   state = {
     domainName: '',
@@ -38,7 +59,12 @@ export default class AddNewPassword extends Component {
     addNewPasswordEvent.preventDefault()
 
     const uniqueIdForNewPasswordEntry = uuidv4()
-    const newPasswordData = {id: uniqueIdForNewPasswordEntry, ...this.state}
+    const randomDomainInitialBackgroundColorClass = getRandomDomainInitialBackgroundColorClass()
+    const newPasswordData = {
+      id: uniqueIdForNewPasswordEntry,
+      ...this.state,
+      domainInitialBackgroundColor: randomDomainInitialBackgroundColorClass,
+    }
 
     const {addNewPasswordHandler} = this.props
 
