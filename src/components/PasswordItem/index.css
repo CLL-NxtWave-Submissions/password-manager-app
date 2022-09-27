@@ -31,6 +31,34 @@
   font-weight: 550;
 }
 
+.domain-initial-background-violet {
+  background-color: #7683cb;
+}
+
+.domain-initial-background-gold {
+  background-color: #f59e0b;
+}
+
+.domain-initial-background-green {
+  background-color: #10b981;
+}
+
+.domain-initial-background-orange {
+  background-color: #f97316;
+}
+
+.domain-initial-background-jade {
+  background-color: #14b8a6;
+}
+
+.domain-initial-background-red {
+  background-color: #b91c1c;
+}
+
+.domain-initial-background-blue {
+  background-color: #0ea5e9;
+}
+
 .password-item-data-container {
   display: flex;
   flex-direction: column;
