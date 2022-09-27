@@ -36,6 +36,8 @@ export default class PasswordCollectionInterface extends Component {
 
   render() {
     const {searchQuery, showPasswords} = this.state
+    const {deletePasswordHandler} = this.props
+
     const filteredPasswords = this.getFilteredPasswords(searchQuery)
     const noPasswords = filteredPasswords.length === 0
 
@@ -96,7 +98,8 @@ export default class PasswordCollectionInterface extends Component {
               <PasswordItem
                 key={filteredPasswordData.id}
                 itemData={filteredPasswordData}
-                onItemDelete={this.onPasswordDelete}
+                onItemDelete={deletePasswordHandler}
+                revealPassword={showPasswords}
               />
             ))}
           </ul>
