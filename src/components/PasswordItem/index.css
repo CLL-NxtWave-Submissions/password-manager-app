@@ -39,6 +39,25 @@
   height: 100%;
 }
 
+.domain-name {
+  font-size: 1.2rem;
+}
+
+.username,
+.password-text {
+  font-size: 0.9rem;
+}
+
+.domain-name,
+.username,
+.password-text {
+  font-weight: 550;
+}
+
+.password-star-img {
+  width: 100%;
+}
+
 .password-item-delete-button {
   border: none;
   outline: none;
