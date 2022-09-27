@@ -38,6 +38,7 @@ const PasswordItem = props => {
       </div>
 
       <button
+        // testid="delete"
         type="button"
         className="password-item-delete-button"
         onClick={onPasswordDeleteAction}
