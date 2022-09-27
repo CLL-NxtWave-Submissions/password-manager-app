@@ -51,11 +51,9 @@ export default class AddNewPassword extends Component {
     })
   }
 
-  getViewPortWidth = () => window.innerWidth
-
   onRender() {
     const {domainName, username, password} = this.state
-    const currentViewportWidth = this.getViewPortWidth()
+    const currentViewportWidth = window.innerWidth
 
     return (
       <div className="add-new-password-bg-container">
