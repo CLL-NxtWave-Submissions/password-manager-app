@@ -1,7 +1,8 @@
 import {Component} from 'react'
-import 'index.css'
+import './index.css'
 
 import AddNewPassword from '../AddNewPassword'
+import PasswordCollectionInterface from '../PasswordCollectionInterface'
 
 export default class PasswordManager extends Component {
   state = {
@@ -47,6 +48,10 @@ export default class PasswordManager extends Component {
           alt="app logo"
         />
         <AddNewPassword addNewPasswordHandler={this.onAddNewPassword} />
+        <PasswordCollectionInterface
+          listOfPasswords={listOfPasswords}
+          deletePasswordHandler={this.onDeletePassword}
+        />
       </div>
     )
   }
