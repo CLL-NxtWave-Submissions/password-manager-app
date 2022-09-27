@@ -28,7 +28,9 @@ export default class PasswordCollectionInterface extends Component {
   getFilteredPasswords = searchInput => {
     const {listOfPasswords} = this.props
     const filteredPasswords = listOfPasswords.filter(passwordDataEntry =>
-      passwordDataEntry.domainName.includes(searchInput),
+      passwordDataEntry.domainName
+        .toLowerCase()
+        .includes(searchInput.toLowerCase()),
     )
 
     return filteredPasswords
