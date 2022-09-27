@@ -2,7 +2,13 @@ import './index.css'
 
 const PasswordItem = props => {
   const {itemData, onItemDelete, revealPassword} = props
-  const {id, domainName, username, password} = itemData
+  const {
+    id,
+    domainName,
+    username,
+    password,
+    domainInitialBackgroundColor,
+  } = itemData
   const domainNameInitial = domainName.slice(0, 1).toUpperCase()
 
   const onPasswordDeleteAction = () => onItemDelete(id)
@@ -10,7 +16,9 @@ const PasswordItem = props => {
   return (
     <li className="password-item-container">
       <div className="password-item-content-container">
-        <div className="password-item-domain-initial-container">
+        <div
+          className={`password-item-domain-initial-container ${domainInitialBackgroundColor}`}
+        >
           <p className="password-item-domain-initial">{domainNameInitial}</p>
         </div>
 
